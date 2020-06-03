@@ -1,2 +1,16 @@
 # Optimizing the Best Play in Basketball using Deep Learning
 Data analytics project on Women's Basketball team to find the highest percentage shooter in a game situation.  The project was submitted to the MIT Sloan/ESPN Sports Analytics Conference and made it to the semi-finals. 
+
+In a close game of basketball, victory or defeat can depend on a last second shot.  Being able to identify the best player and play scenario for a given opponent’s defense, can increase the likelihood of victory. Progress in technology has resulted in an increase in the popularity of sports analytics over the last two decades, where data can be used by teams and individuals to their advantage. A popular data analytic technique in sports is deep learning.  Deep learning is a branch of machine learning that finds patterns within big data and can predict future decisions. The process relies on a raw dataset for training purposes. It can be utilized in sports by using deep learning to read the data and provide a better understanding of where players can be the most successful.  
+In this study we collected data from basketball games of a college women’s team and applied deep learning to optimize the best offensive play in a game scenario for given a set of features. The system is used to predict the play that would lead to the highest probability of a made shot.
+
+
+The data was collected over the 2018-2019 season of a college women’s basketball team.  The feature vector consists of a set of attributes: Player, Play, Defense type, Defender position, Screen, Quarter, Seconds on the shot clock, Number of defenders, Location, Hand, Shot type, Passes in half court, Time left in the quarter, and Point Difference.  Based on these attributes the model is trained to predict the ‘Make’ or ‘Miss’ of a shot in a given game situation. 
+
+After collecting data and an explanatory data analysis, feature selection and extraction is performed. Using a prediction model, I built a machine learning model to predict the make/miss values based on the other features. I then utilized supervised learning to train the model. I evaluated the accuracy for each pattern recognition model and I chose a multi-level neural network for learning non-linear relationships.
+The model predicts the actual result of the shot with an accuracy of 64.4%.  The model predicts the percentage of a shot going in based on the attributes provided. The f-measure of the model is 73.78%.  This gives a predicted make class precision of 58.33% and predicted miss class precision of 62.5%.   
+
+# Steps for Running the Model 
+To run the model, RapidMiner needs to be installed.  Once RapidMiner is installed, the file "Shooting Predictor SLOAN.rmp" needs to be downloaded.  The data also needs to be downloaded and imported to RapidMiner, before running the model.  The data is an excel spreadsheet "SLOAN_FINAL Pacific women's basketball.xlsx".  The following columns within the data need to be excluded when running the data "Shot Number" and "Opponent".  These columns do not contribute to the model and are only for orginizational purposes.
+
+Once the data is imported to RapidMiner, the Auto Model can be run.  A video for how to run the model has also been uploaded to help run the optimization part of the model -"Optimize Video File.mp4".  
